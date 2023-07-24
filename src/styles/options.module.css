@@ -1,0 +1,22 @@
+.optionDiv {
+    width: 12%;
+    height: 10%;
+    background: #d2b7f6;
+    margin-bottom: 2%;
+    border-radius: 8%;
+}
+
+.selectBtn {
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    margin:0 0.3em 0.9em 0.3em;
+    background: #84a1ae;
+  }
+
+  i {
+    font-size: 1.5em;
+    color: white;
+  }

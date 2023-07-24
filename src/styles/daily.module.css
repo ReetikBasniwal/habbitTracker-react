@@ -1,0 +1,23 @@
+.habbit {
+    background: #E7D9F9;
+    width: 65%;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 20px; */
+    margin:2% auto 0 auto ;
+    position: relative;
+  }
+
+  .iconDiv {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .iconDiv i {
+    font-size: 1.5em;
+    color: rgb(152, 120, 177);
+  }

@@ -1,0 +1,35 @@
+.habbit {
+    background: #504065;
+    width: 70%;
+    border: 1px solid #e0e0e0;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;  
+  }
+
+  .selectBtn {
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    padding: 0%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.3em;
+    background: #84a1ae;
+  }
+
+  i {
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .optionsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
