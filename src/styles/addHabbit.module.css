@@ -1,0 +1,61 @@
+/* Create Post */
+.createHabbit {
+    background: #E7D9F9;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .createHabbit h1{
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: #726684;
+    margin-bottom: -30px;
+  }
+  .createHabbit p{
+    font-family: cursive;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: -30px;
+    color: #7d6d94;
+  }
+
+  .createHabbit > div {
+    padding: 10px;
+    display: flex;
+  }
+  .createHabbit input {
+    height: 50px;
+    padding: 10px;
+    width: 85%;
+    color: #4a4453;;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    background-color: #e0cafc;
+  }
+  .addHabbitBtn {
+    width: 124px;
+    height: 48px;
+    left: 111.5px;
+    top: 0px;
+    background: #944bf5;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+  }
+  .addHabbitBtn:focus,
+  .createHabbit textarea:focus {
+    outline: none;
+  }
+  .addHabbitBtn:hover {
+    cursor: pointer;
+  }
+  
