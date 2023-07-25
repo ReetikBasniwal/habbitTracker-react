@@ -18,7 +18,13 @@
     font-family: cursive;
     font-weight: 500;
     font-size: 1.8rem;
-    margin-bottom: -30px;
+    color: #7d6d94;
+  }
+
+  .createHabbit span{
+    font-family: cursive;
+    font-weight: 500;
+    font-size: 1.2rem;
     color: #7d6d94;
   }
 
@@ -38,6 +44,7 @@
     border-bottom-right-radius: 18px;
     border-top-left-radius: 18px;
     background-color: #e0cafc;
+    margin-bottom: 10px
   }
   .addHabbitBtn {
     width: 124px;
@@ -50,6 +57,7 @@
     color: #fff;
     font-size: 20px;
     border: none;
+    margin-bottom: 10px
   }
   .addHabbitBtn:focus,
   .createHabbit textarea:focus {
