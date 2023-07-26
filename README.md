@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Habit Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Habit Tracker App is a simple web application that allows users to track their habits and mark them as done or not done on a daily basis. Users can add new habits, delete existing habits, and update the status of each habit based on their daily activities.
 
-## Available Scripts
+## Technologies Used
+- React.js for building the frontend user interface
+- Redux for state management
+- React Redux Toolkit for easier Redux implementation
+- CSS for styling the UI
+- LocalStorage for persisting habit data locally in the browser
+- npm for package management
 
-In the project directory, you can run:
+## Installation
+To run the app locally, follow these steps:
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Change into the project directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Install dependencies:
 
-### `npm test`
+4. Start the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Open your browser and navigate to:
 
-### `npm run build`
+## Usage
+- Once the app is running, you will see the list of habits on the main screen.
+- To add a new habit, click the "Add Habit" button and enter the habit's name. Press Enter to add the habit.
+- To delete a habit, click the trash can icon next to the habit you want to delete.
+- To mark a habit as done, click the checkmark icon. The habit will turn green to indicate it is completed for the day.
+- To mark a habit as not done, click the cross icon. The habit will turn red to indicate it is not completed for the day.
+- To reset a habit to the default state (not completed), click the minus icon.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
+- Add new habits with a custom name.
+- Delete existing habits.
+- Mark habits as done, not done, or reset them to the default state.
+- The status of habits is persisted locally using LocalStorage, so it will be saved across page refreshes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to create a pull request or submit an issue.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
