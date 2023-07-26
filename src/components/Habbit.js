@@ -16,7 +16,7 @@ export default function Habbit() {
           <div className={styles.habbit} key={`habbit-id-${index}`}>
             <h2>{habbit.text}</h2>
             <div className={styles.optionsContainer}>
-              <Options weekDates={habbit.weekData} isCompleted={habbit.isDone}/>
+              <Options habbit={habbit}/>
             </div>
           </div>
         );

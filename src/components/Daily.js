@@ -17,7 +17,7 @@ export default function Daily() {
             <span className={styles.iconDiv}>
               <i className="fa-regular fa-circle-dot"></i>
             </span>
-            <button className={`${styles.deleteBtn} ${styles['vibrate-on-hover']}`} onClick={() => dispatch(habbitActions.deleteHabbit(habbit._id))}><i class="fa-solid fa-trash-can"></i></button>
+            <button className={`${styles.deleteBtn} ${styles['vibrate-on-hover']}`} onClick={() => dispatch(habbitActions.deleteHabbit(habbit._id))}><i className="fa-solid fa-trash-can"></i></button>
             <h4>{habbit.text}</h4>
           </div>
         );

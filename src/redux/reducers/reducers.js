@@ -86,7 +86,57 @@ const habbitSlice = createSlice({
     },
     // DELETE ACTION
     deleteHabbit: (state, action) => {
-        state.habbits.splice(action.payload, 1);
+      state.habbits.splice(action.payload, 1);
+    },
+    // MARK DONE ACTION
+    markDone: (state, action) => {
+      const { habbitId, dayId } = action.payload;
+      console.log(habbitId);
+      console.log(dayId);
+      const habitToUpdate = state.habbits.find(
+        (habbit) => habbit._id === habbitId
+      );
+      if (habitToUpdate) {
+        const dayToUpdate = habitToUpdate.weekData.find(
+          (day) => day.id === dayId
+        );
+        if (dayToUpdate) {
+          console.log(`Marking habit ${habbitId} as done on day ${dayId}`);
+          dayToUpdate.isDone = true;
+        }
+      }
+    },
+    // MARK NOT DONE ACTION
+    markNotDone: (state, action) => {
+      const { habbitId, dayId } = action.payload;
+      const habitToUpdate = state.habbits.find(
+        (habbit) => habbit._id === habbitId
+      );
+      if (habitToUpdate) {
+        const dayToUpdate = habitToUpdate.weekData.find(
+          (day) => day.id === dayId
+        );
+        if (dayToUpdate) {
+          console.log(`Marking habit ${habbitId} as done on day ${dayId}`);
+          dayToUpdate.isDone = false;
+        }
+      }
+    },
+    // MARK DEFAULT ACTION
+    markDefault: (state, action) => {
+      const { habbitId, dayId } = action.payload;
+      const habitToUpdate = state.habbits.find(
+        (habbit) => habbit._id === habbitId
+      );
+      if (habitToUpdate) {
+        const dayToUpdate = habitToUpdate.weekData.find(
+          (day) => day.id === dayId
+        );
+        if (dayToUpdate) {
+          console.log(`Marking habit ${habbitId} as done on day ${dayId}`);
+          dayToUpdate.isDone = null;
+        }
+      }
     },
   },
 });
