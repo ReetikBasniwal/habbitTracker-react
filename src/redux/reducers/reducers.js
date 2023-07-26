@@ -1,4 +1,3 @@
-// import { ADD_HABBIT, DELETE_HABBIT, TOGGLE_HABIT, toggleHabbit } from "../action/actions";
 import { createSlice } from "@reduxjs/toolkit";
 let id = 1;
 
@@ -86,7 +85,17 @@ const habbitSlice = createSlice({
     },
     // DELETE ACTION
     deleteHabbit: (state, action) => {
-      state.habbits.splice(action.payload, 1);
+        const index = state.habbits.findIndex(
+            (habbit) => habbit._id === action.payload
+          );
+          if (index !== -1) {
+            state.habbits.splice(index, 1);
+    
+            // Update local storage after removing the habit
+            localStorage.setItem("reduxState", JSON.stringify(state));
+          }
+    //   state.habbits.splice(action.payload, 1);
+    //   localStorage.setItem("reduxState", JSON.stringify(state));
     },
     // MARK DONE ACTION
     markDone: (state, action) => {
@@ -144,6 +153,30 @@ const habbitSlice = createSlice({
 export const habbitReducer = habbitSlice.reducer;
 
 export const habbitActions = habbitSlice.actions;
+
+export const saveStateToLocalStorage = (state) => {
+  try {
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem("reduxState", serializedState);
+  } catch (error) {
+    // Handle errors here, if necessary
+    console.error("Error saving state to local storage:", error);
+  }
+};
+
+export const loadStateFromLocalStorage = () => {
+    try {
+      const serializedState = localStorage.getItem("reduxState");
+      if (serializedState === null) {
+        return undefined; // If no state found in local storage, return undefined to let Redux use the initial state.
+      }
+      return JSON.parse(serializedState);
+    } catch (error) {
+      // Handle errors here, if necessary
+      console.error("Error loading state from local storage:", error);
+      return undefined;
+    }
+  };
 
 // export function habbitReducer(state = initialState, action){
 //     switch(action.type){

@@ -11,17 +11,23 @@ export default function Daily() {
 
   return (
     <>
-      {habbits && habbits.map((habbit, index) => {
-        return (
-          <div className={styles.habbit} key={`habbit-id-${index}`}>
-            <span className={styles.iconDiv}>
-              <i className="fa-regular fa-circle-dot"></i>
-            </span>
-            <button className={`${styles.deleteBtn} ${styles['vibrate-on-hover']}`} onClick={() => dispatch(habbitActions.deleteHabbit(habbit._id))}><i className="fa-solid fa-trash-can"></i></button>
-            <h4>{habbit.text}</h4>
-          </div>
-        );
-      })}
+      {habbits &&
+        habbits.map((habbit, index) => {
+          return (
+            <div className={styles.habbit} key={`habbit-id-${index}`}>
+              <span className={styles.iconDiv}>
+                <i className="fa-regular fa-circle-dot"></i>
+              </span>
+              <button
+                className={`${styles.deleteBtn} ${styles["vibrate-on-hover"]}`}
+                onClick={() => dispatch(habbitActions.deleteHabbit(habbit._id))}
+              >
+                <i className="fa-solid fa-trash-can"></i>
+              </button>
+              <h4>{habbit.text}</h4>
+            </div>
+          );
+        })}
     </>
   );
 }
