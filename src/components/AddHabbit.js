@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/addHabbit.module.css";
 import { useDispatch } from "react-redux";
-import { addHabbit } from "../redux/action/actions";
+import { habbitActions } from "../redux/reducers/reducers";
 
 export default function AddHabbit() {
   const [habbit, setHabbit] = useState("");
@@ -9,7 +9,7 @@ export default function AddHabbit() {
 
   const handleAddHabbit = (e) => {
     e.preventDefault();
-    dispatch(addHabbit(habbit));
+    dispatch(habbitActions.addHabbit(habbit));
     setHabbit("");
   };
 
