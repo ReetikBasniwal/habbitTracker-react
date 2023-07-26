@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../styles/Habbit.module.css";
 import Options from "./Options";
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
+
 
 
 export default function Habbit() {
@@ -11,6 +13,7 @@ export default function Habbit() {
 
   return (
     <>
+      <ToastContainer />
       {habbits.map((habbit, index) => {
         return (
           <div className={styles.habbit} key={`habbit-id-${index}`}>

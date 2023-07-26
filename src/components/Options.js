@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/options.module.css";
 import { useDispatch } from "react-redux";
 import { habbitActions } from "../redux/reducers/reducers";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Options(props) {
@@ -31,7 +31,6 @@ export default function Options(props) {
 
   return (
     <>
-    <ToastContainer />
       {habbit.weekData.map((date, index) => (
         <div className={styles.optionDiv} key={`id-${index}`}>
           <h3 style={{ color: "#ffffff" }}>{date.day}</h3>

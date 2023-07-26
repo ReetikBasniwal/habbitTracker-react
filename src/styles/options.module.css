@@ -14,6 +14,7 @@
     height: 2rem;
     margin:0 0.3em 0.9em 0.3em;
     background: #84a1ae;
+    flex: 1; /* Allow the button to grow and take available space */
   }
 
   
