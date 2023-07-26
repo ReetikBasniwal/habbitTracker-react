@@ -13,6 +13,9 @@ export default function Daily() {
     <>
       {habbits &&
         habbits.map((habbit, index) => {
+          // Calculate the completed days count
+          const completedDays = habbit.weekData.filter((day) => day.isDone === true).length;
+
           return (
             <div className={styles.habbit} key={`habbit-id-${index}`}>
               <span className={styles.iconDiv}>
@@ -24,7 +27,8 @@ export default function Daily() {
               >
                 <i className="fa-solid fa-trash-can"></i>
               </button>
-              <h4>{habbit.text}</h4>
+              <h4 >{habbit.text}</h4>
+              <span style={{marginBottom: '10px'}}>{`${completedDays}/7 days`}</span>
             </div>
           );
         })}
