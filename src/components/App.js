@@ -2,19 +2,28 @@ import "../App.css";
 import AddHabbit from "./AddHabbit";
 import Daily from "./Daily";
 import Habbit from "./Habbit";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
+  const onDaily = () => {
+    navigate('/');
+  }
+
+  const onWeekly = () => {
+    navigate('/weekly_view');
+  }
   return (
     <div className="App">
       <AddHabbit />
       <div style={styles.buttonContainer}>
-        <button style={styles.Daily}>Daily View</button>
-        <button style={styles.Week}>Week View</button>
+        <button style={styles.Daily} onClick={onDaily}>Daily View</button>
+        <button style={styles.Week} onClick={onWeekly}>Week View</button>
       </div>
 
       <Routes>
-        <Route path="/daily_view" element={<Daily />} />
+        <Route path="/" element={<Daily />} />
         <Route path="/weekly_view" element={<Habbit />} />
       </Routes>
     </div>
@@ -39,6 +48,7 @@ const styles = {
     border: "none",
     borderRadius: "10px",
     color: "white",
+    cursor: 'pointer'
   },
   Week: {
     fontFamily: "Trebuchet MS, sans-serif",
@@ -48,6 +58,7 @@ const styles = {
     border: "none",
     borderRadius: "10px",
     color: "white",
+    cursor: 'pointer'
   },
 };
 export default App;

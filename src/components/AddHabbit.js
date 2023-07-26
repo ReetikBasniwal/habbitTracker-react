@@ -4,13 +4,12 @@ import { useDispatch } from "react-redux";
 import { habbitActions } from "../redux/reducers/reducers";
 
 export default function AddHabbit() {
-  const [habbit, setHabbit] = useState("");
+  const [habbitText, setHabbitText] = useState("");
   const dispatch = useDispatch();
-
   const handleAddHabbit = (e) => {
     e.preventDefault();
-    dispatch(habbitActions.addHabbit(habbit));
-    setHabbit("");
+    dispatch(habbitActions.addHabbit(habbitText));
+    setHabbitText("");
   };
 
   return (
@@ -31,8 +30,8 @@ export default function AddHabbit() {
         <input
           className={styles.addHabbit}
           placeholder="Type your habbit here..."
-          value={habbit}
-          onChange={(e) => setHabbit(e.target.value)}
+          value={habbitText}
+          onChange={(e) => setHabbitText(e.target.value)}
         />
         <button className={styles.addHabbitBtn} onClick={handleAddHabbit}>
           Add Habbit
