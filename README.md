@@ -38,6 +38,9 @@ To run the app locally, follow these steps:
 - Mark habits as done, not done, or reset them to the default state.
 - The status of habits is persisted locally using LocalStorage, so it will be saved across page refreshes.
 
+## Hosted Link
+The app is hosted and can be accessed at: [Habit Tracker App](https://habbittrackerreact.netlify.app/)
+
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to create a pull request or submit an issue.
 
