@@ -4,6 +4,14 @@ let id = 1;
 const initialState = {
   habbits: [],
 };
+// 
+const formatDate = (day) => { 
+  const todayDate = new Date();
+  const previousSunday = new Date(todayDate);
+  previousSunday.setDate(todayDate.getDate() - day);
+  return previousSunday.toLocaleDateString("en-GB");
+};
+// 
 
 const habbitSlice = createSlice({
   name: "habbit",
@@ -12,9 +20,7 @@ const habbitSlice = createSlice({
     // this is ADD ACTION
     addHabbit: (state, action) => {
       const today = new Date();
-      const sundayDate = today.getDate() - today.getDay();
-      const month = today.getMonth();
-      const year = today.getFullYear();
+      console.log(today);
       const habbit = {
         _id: id++,
         text: action.payload,
@@ -22,57 +28,43 @@ const habbitSlice = createSlice({
           {
             id: 0,
             day: "Sunday",
-            dd: sundayDate,
-            mm: month,
-            year: year,
+            date: formatDate(today.getDay()),
             isDone: null,
           },
           {
             id: 1,
             day: "Monday",
-            dd: sundayDate + 1,
-            mm: month,
-            year: year,
+            date: formatDate(today.getDay()+1),
             isDone: null,
           },
           {
             id: 2,
             day: "Tuesday",
-            dd: sundayDate + 2,
-            mm: month,
-            year: year,
+            date: formatDate(today.getDay()+2),
             isDone: null,
           },
           {
             id: 3,
             day: "Wednesday",
-            dd: sundayDate + 3,
-            mm: month,
-            year: year,
+            date: formatDate(today.getDay()+3),
             isDone: null,
           },
           {
             id: 4,
             day: "Thursday",
-            dd: sundayDate + 4,
-            mm: month,
-            year: year,
+            date: formatDate(today.getDay()+4),
             isDone: null,
           },
           {
             id: 5,
             day: "Friday",
-            dd: sundayDate + 5,
-            mm: month,
-            year: year,
+            date:  formatDate(today.getDay()+5),
             isDone: null,
           },
           {
             id: 6,
             day: "Saturday",
-            dd: sundayDate + 6,
-            mm: month,
-            year: year,
+            date: formatDate(today.getDay()+6),
             isDone: null,
           },
         ],
@@ -94,8 +86,6 @@ const habbitSlice = createSlice({
             // Update local storage after removing the habit
             localStorage.setItem("reduxState", JSON.stringify(state));
           }
-    //   state.habbits.splice(action.payload, 1);
-    //   localStorage.setItem("reduxState", JSON.stringify(state));
     },
     // MARK DONE ACTION
     markDone: (state, action) => {

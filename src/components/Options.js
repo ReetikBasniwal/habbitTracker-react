@@ -31,32 +31,32 @@ export default function Options(props) {
 
   return (
     <>
-      {habbit.weekData.map((date, index) => (
+      {habbit.weekData.map((dateItem, index) => (
         <div className={styles.optionDiv} key={`id-${index}`}>
-          <h3 style={{ color: "#ffffff" }}>{date.day}</h3>
+          <h3 style={{ color: "#ffffff" }}>{dateItem.day}</h3>
           <h3
             style={{ color: "#7449af" }}
-          >{`${date.dd}/${date.mm}/${date.year}`}</h3>
-          <button
+          >{dateItem.date}</h3>
+           <button
             className={styles.selectBtn}
             style={
-              date.isDone === true ? { backgroundColor: "greenyellow" } : null
+              dateItem.isDone === true ? { backgroundColor: "greenyellow" } : null
             }
-            onClick={() => toggleHabbit(habbit._id, date.id, 1)}
+            onClick={() => toggleHabbit(habbit._id, dateItem.id, 1)}
           >
             <i className="fa-solid fa-check"></i>
           </button>
           <button
             className={styles.selectBtn}
-            style={date.isDone === false ? { backgroundColor: "red" } : null}
-            onClick={() => toggleHabbit(habbit._id, date.id, 2)}
+            style={dateItem.isDone === false ? { backgroundColor: "red" } : null}
+            onClick={() => toggleHabbit(habbit._id, dateItem.id, 2)}
           >
             <i className="fa-solid fa-xmark"></i>
           </button>
           <button
             className={styles.selectBtn}
-            style={date.isDone === null ? { backgroundColor: "#7e4bc6" } : null}
-            onClick={() => toggleHabbit(habbit._id, date.id, 3)}
+            style={dateItem.isDone === null ? { backgroundColor: "#7e4bc6" } : null}
+            onClick={() => toggleHabbit(habbit._id, dateItem.id, 3)}
           >
             <i className="fa-solid fa-minus"></i>
           </button>
